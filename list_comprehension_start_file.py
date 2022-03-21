@@ -73,7 +73,7 @@ print(four_list)
 
 ## count how many times the word 'the' appears in the text file - 'sometext.txt'
 myfile = open('sometext.txt', 'r')
-the_list = [i.count(" the ") for i in myfile]
+the_list = [i.count("the") for i in myfile]
 print(sum(the_list))
 
 ## Extract the numbers from the following phrase ##
