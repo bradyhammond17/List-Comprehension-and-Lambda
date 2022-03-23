@@ -88,11 +88,15 @@ print(result2)
 check whether a given string contains a capital letter, a lower case letter, a number and a minimum length of 8 characters.
 (This is like a password verification function, HINT: Python function 'any' may be useful)
 '''
-test = 'Hello World!'
-check = list(filter(lambda c: c.isupper(), test))
-print(check)
-
-#4-5 lines, 3 lambda functions, use list comprehension as well
+password = 'Hello World!'
+pass_list = [char for char in password]
+check1 = list(map(lambda c: c.isupper(), pass_list))
+check2 = list(map(lambda c: c.islower(), pass_list))
+check3 = list(map(lambda c: len(password) >= 8, password))
+verify1 = any(check1)
+verify2 = any(check2)
+verify3 = any(check3)
+print(verify1, ',', verify2, ',', verify3)
 
 
 ''' 7)
@@ -104,3 +108,6 @@ original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sci
 # Expected Result:
 # [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 '''
+original_scores = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+result = sorted(original_scores, key = lambda x: x[1])
+print(result)
